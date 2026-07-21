@@ -1,0 +1,181 @@
+
+/* ausgelagerte CSS-Datei */
+
+/*
+Aufbau:
+Selektor {
+    Style-Eigenschaft: Wert;
+    ...
+}
+*/
+
+/* 
+bei Schriftgrößen die Einheit Pixel vermeiden!
+em ist eine relative Einheit und bezieht sich in dem Fall auf die Browsereinstellung
+Zahlenangabe ist ein Faktor (1.5 mal Standardschriftgröße)
+*/
+html {
+
+    font-size: 1.2em;
+}
+
+body {
+
+    font-family: Helvetica, Arial, sans-serif;
+    color: rgb(50, 50, 50);
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+/****** Überschriften und Absätze *******/
+
+/* mehrere Elemente können mit Komma getrennt aufgelistet werden */
+h1, h2, h3, h4 {
+
+    font-weight: bold;
+}
+
+/* rem ist eine relative Einheit als Faktor und bezieht sich auf Root (html-Element) */
+h1 {
+    font-size: 2rem;
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 24px;
+    margin-bottom: 18px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+p {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    line-height: 1.3rem;
+}
+
+/******* Darstellungen und Bilder ********/
+
+/* Außenabstände top right bottom left */
+figure {
+
+    margin: 6px 0 6px 0;
+}
+
+img {
+    width: 100%;
+}
+
+/******* Container für Haupt-Inhalt *******/
+
+header, main {
+    max-width: 1200px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+header {
+
+    background-color: rgb(47, 206, 110);
+    padding: 24px 32px;
+
+}
+
+main {
+
+    background-color: rgb(230, 255, 240);
+    padding: 24px 32px;
+    min-height: 800px;
+}
+
+/******** Links und Listen ********/
+
+a {
+    color: rgb(0, 169, 87);
+    text-decoration: none;
+}
+
+/* Pseudoklasse für Mouse Over */
+a:hover {
+
+    color: rgb(0, 135, 70);
+    text-decoration: underline;
+    /* background-color: blueviolet; */
+}
+
+/* Style für Link als Button */
+.button-link {
+
+    /* für eine vorgegebene Breite muss sich a wie ein Blockelemnt verhalten. inline-block lässt Elemente nebeneinander stehen */
+    display: inline-block;
+    /* width: 200px; */
+    /* height: 60px; */
+    padding: 9px;
+    color: aliceblue;
+    background-color: cornflowerblue;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 1px solid rgb(50, 104, 205);
+    border-radius: 6px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.button-link:hover {
+
+    color: rgb(207, 233, 255);
+    background-color: rgb(79, 125, 209);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/******* Formular ********/
+
+label {
+    display: block;
+}
+
+textarea {
+    min-height: 200px;
+}
+
+.eingabe {
+
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 6px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.1rem;
+    padding: 3px 9px;
+    border-radius: 6px;
+    border: 1px solid gray;
+}
+
+.checkbox {
+
+    display: inline-block;
+    width: auto;
+    /* vertical-align: middle; */
+}
+
+.checkbox-label {
+
+    display: inline-block;
+    width: auto;
+    margin-right: 12px;
+    margin-top: 0;
+}
+
+.wichtig {
+
+    color: crimson;
+    /* font-weight: bold; */
+}
